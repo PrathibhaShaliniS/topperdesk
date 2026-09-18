@@ -1,423 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TopperDisk</title>
+    <title>TopperDisk</title>
 
-<style>
+    <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f8fbfb;
+        }
 
-body{
-    background:#f7fcfb;
-    color:#415a56;
-    line-height:1.6;
-}
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+        }
 
-/* Navigation */
+        .logo {
+            font-size: 30px;
+            color: #5da9a9;
+        }
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    background:white;
-    box-shadow:0 2px 12px rgba(56,178,166,0.10);
-}
+        .login-btn {
+            background: #69b7a9;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
 
-.logo{
-    font-size:32px;
-    font-weight:bold;
-    color:#2fa79b;
-}
-
-nav a{
-    text-decoration:none;
-    margin-left:25px;
-    color:#415a56;
-    font-weight:bold;
-}
-
-.login{
-    background:#4ec5b8;
-    color:white;
-    padding:10px 20px;
-    border-radius:25px;
-}
-
-.login:hover{
-    background:#3bb3a6;
-}
-
-/* Hero */
-
-.hero{
-    height:90vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    background:linear-gradient(135deg,#d7f5ef,#eaf3ff 55%,#fdeee6);
-    color:#22514b;
-    padding:0 20px;
-}
-
-.hero h1{
-    font-size:60px;
-    color:#1f8d82;
-}
-
-.hero p{
-    margin-top:20px;
-    font-size:22px;
-    max-width:700px;
-}
-
-.hero button{
-    margin-top:35px;
-    padding:15px 35px;
-    border:none;
-    border-radius:30px;
-    background:#ff9f7e;
-    color:#5a2a17;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    box-shadow:0 6px 18px rgba(255,159,126,.35);
-}
-
-.hero button:hover{
-    background:#ff8c66;
-}
-
-/* Sections */
-
-section{
-    padding:70px 10%;
-}
-
-.title{
-    text-align:center;
-    color:#2fa79b;
-    font-size:38px;
-    margin-bottom:20px;
-}
-
-.subtitle{
-    text-align:center;
-    max-width:700px;
-    margin:auto;
-    margin-bottom:40px;
-    color:#5d7772;
-}
-
-/* Cards */
-
-.container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.card{
-    padding:30px;
-    border-radius:18px;
-    box-shadow:0 6px 20px rgba(80,120,115,.08);
-    text-align:center;
-    transition:transform .2s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-}
-
-.card h3{
-    margin-bottom:15px;
-    font-size:21px;
-}
-
-.card p{
-    margin-bottom:20px;
-    color:#5d7772;
-}
-
-.card button{
-    padding:10px 25px;
-    border:none;
-    color:white;
-    border-radius:25px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-/* Individual card tints */
-
-.mint{ background:#e6f8f4; }
-.mint h3{ color:#2fa79b; }
-.mint button{ background:#4ec5b8; }
-.mint button:hover{ background:#3bb3a6; }
-
-.peach{ background:#fff1e9; }
-.peach h3{ color:#e8825c; }
-.peach button{ background:#ff9f7e; color:#5a2a17; }
-.peach button:hover{ background:#ff8c66; }
-
-.lilac{ background:#f1eefb; }
-.lilac h3{ color:#8071c7; }
-.lilac button{ background:#9b8ce0; }
-.lilac button:hover{ background:#8877d6; }
-
-.sky{ background:#e8f2fd; }
-.sky h3{ color:#4f8fd1; }
-.sky button{ background:#6ba7e0; }
-.sky button:hover{ background:#5896d4; }
-
-/* Mentorship */
-
-.banner{
-    background:linear-gradient(135deg,#d7f5ef,#fdeee6);
-    color:#22514b;
-    text-align:center;
-    padding:60px 20px;
-}
-
-.banner h2{
-    font-size:38px;
-    color:#1f8d82;
-}
-
-.banner p{
-    margin:20px auto;
-    max-width:700px;
-}
-
-.banner button{
-    padding:15px 35px;
-    border:none;
-    border-radius:30px;
-    background:#4ec5b8;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-    box-shadow:0 6px 18px rgba(78,197,184,.35);
-}
-
-.banner button:hover{
-    background:#3bb3a6;
-}
-
-/* Footer */
-
-footer{
-    background:#e6f8f4;
-    color:#415a56;
-    text-align:center;
-    padding:35px;
-    border-top:3px solid #c5ebe4;
-}
-
-footer h3{
-    color:#2fa79b;
-}
-
-footer a{
-    color:#415a56;
-    text-decoration:none;
-    margin:0 15px;
-}
-
-footer a:hover{
-    color:#2fa79b;
-}
-
-</style>
+    </style>
 
 </head>
 
 <body>
 
-<header>
+    <header>
 
-<div class="logo">
-TopperDisk
-</div>
+        <h1 class="logo">TopperDisk</h1>
 
-<nav>
+        <a href="login.html" class="login-btn">Login</a>
 
-<a href="#">About Us</a>
-
-<a href="#" class="login">Login</a>
-
-</nav>
-
-</header>
-
-<!-- Hero -->
-
-<div class="hero">
-
-<h1>Welcome to TopperDisk</h1>
-
-<p>
-
-Your Ultimate Learning Companion.<br>
-
-Get quality study resources,
-formula sheets,
-expert mentorship,
-and discussions with achievers.
-
-</p>
-
-<button>Get Started</button>
-
-</div>
-
-<!-- Features -->
-
-<section>
-
-<h2 class="title">
-Our Resources
-</h2>
-
-<div class="container">
-
-<div class="card mint">
-
-<h3>📚 Notes</h3>
-
-<p>
-
-Access well-organized study notes prepared by experts.
-
-</p>
-
-<button>Browse Notes</button>
-
-</div>
-
-<div class="card peach">
-
-<h3>📄 Formula Sheets</h3>
-
-<p>
-
-Quick revision sheets for important concepts.
-
-</p>
-
-<button>View Sheets</button>
-
-</div>
-
-<div class="card lilac">
-
-<h3>💬 Q/A Discussions</h3>
-
-<p>
-
-Interact with achievers and clear your doubts.
-
-</p>
-
-<button>Join Now</button>
-
-</div>
-
-<div class="card sky">
-
-<h3>🤖 AI Agent</h3>
-
-<p>
-
-Get instant answers, step-by-step solutions and smart study
-plans from your personal AI study assistant.
-
-</p>
-
-<button>Ask AI Agent</button>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Mentorship -->
-
-<div class="banner">
-
-<h2>
-
-Expert Mentorship
-
-</h2>
-
-<p>
-
-Book one-to-one mentorship sessions with experienced mentors
-and build your personalized preparation strategy.
-
-</p>
-
-<button>
-
-Book Mentorship
-
-</button>
-
-</div>
-
-<!-- About -->
-
-<section>
-
-<h2 class="title">
-About Us
-</h2>
-
-<p class="subtitle">
-
-TopperDisk is an educational platform built to help students
-prepare smarter by providing quality study resources,
-mentorship, and an interactive learning community.
-
-</p>
-
-</section>
-
-<!-- Footer -->
-
-<footer>
-
-<h3>TopperDisk</h3>
-
-<br>
-
-<a href="#">About Us</a>
-
-<a href="#">Privacy Policy</a>
-
-<a href="#">Contact</a>
-
-<br><br>
-
-<p>
-
-© 2026 TopperDisk. All Rights Reserved.
-
-</p>
-
-</footer>
+    </header>
 
 </body>
+
 </html>
